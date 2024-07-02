@@ -53,6 +53,7 @@ import oimo.dynamics.World;
 import oimo.common.Vec3;
 import oimo.common.MathUtil;
 import oimo.dynamics.rigidbody.RigidBody;
+import oimo.collision.broadphase.BroadPhaseType
 
 
 class Main extends Sprite {
@@ -79,7 +80,7 @@ class Main extends Sprite {
 		var fps = new FPS();
 		stage.addChild(fps);
 		
-		oimo_world = new World(null, new Vec3(0, -9.80665, 0));
+		oimo_world = new World(BroadPhaseType.BVH, new Vec3(0, -9.80665, 0));
 		
 		// first step, must do before anything else !!!
 		OimoUtils.setWorld(oimo_world);
